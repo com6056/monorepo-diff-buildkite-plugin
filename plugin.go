@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/json"
 	"errors"
+    "fmt"
 	"strings"
 
 	log "github.com/sirupsen/logrus"
 )
 
-const pluginName = "github.com/chronotc/monorepo-diff"
+const pluginName = "github.com/com6056/monorepo-diff"
 
 // Plugin buildkite monorepo diff plugin structure
 type Plugin struct {
@@ -85,6 +86,7 @@ func initializePlugin(data string) (Plugin, error) {
 
 	for _, p := range plugins {
 		for key, plugin := range p {
+            fmt.Println(key)
 			if strings.HasPrefix(key, pluginName) {
 				return plugin, nil
 			}
