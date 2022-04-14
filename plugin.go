@@ -8,7 +8,7 @@ import (
 	log "github.com/sirupsen/logrus"
 )
 
-const pluginName = "github.com/chronotc/monorepo-diff"
+const pluginName = "ssh://git@github.com/com6056/monorepo-diff-buildkite-plugin"
 
 // Plugin buildkite monorepo diff plugin structure
 type Plugin struct {
